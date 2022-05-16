@@ -1,4 +1,4 @@
-package poiupv;
+package model;
 
 
 import javafx.beans.property.SimpleStringProperty;

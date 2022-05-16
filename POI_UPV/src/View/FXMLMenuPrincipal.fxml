@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="277.0" prefWidth="857.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="233.0" prefWidth="320.0">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/default.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Name" />
+                  <Label text="Surname" />
+               </children>
+            </VBox>
+            <VBox prefHeight="233.0" prefWidth="529.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="57.0" prefWidth="528.0">
+                     <children>
+                        <Label text="Summary :" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="109.0" prefWidth="528.0">
+                     <children>
+                        <Label text="Grade : " />
+                        <Label text="18 " />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER" prefHeight="90.0" prefWidth="280.0">
+                           <children>
+                              <Label text="Exercice passed :" />
+                              <Label text="Number" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" prefHeight="89.0" prefWidth="272.0">
+                           <children>
+                              <Label text="Exercice failed :" />
+                              <Label text="Number" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="400.0" prefWidth="857.0">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="320.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Edit Prodile" />
+                  <Button mnemonicParsing="false" text="Setting" />
+                  <Button mnemonicParsing="false" text="Log OUt" />
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" prefHeight="356.0" prefWidth="540.0">
+               <children>
+                  <Button mnemonicParsing="false" text="Exercice" />
+                  <Button mnemonicParsing="false" text="See Ranking" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

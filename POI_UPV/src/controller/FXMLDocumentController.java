@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package poiupv;
+package controller;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -28,7 +28,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import poiupv.Poi;
+import model.Poi;
 
 /**
  *
@@ -114,10 +114,10 @@ public class FXMLDocumentController implements Initializable {
     }
 
     private void initData() {
-        hm.put("2F", new Poi("2F", "Edificion del DSIC", 325, 225));
-        hm.put("Agora", new Poi("Agora", "Agora", 600, 360));
-        map_listview.getItems().add(hm.get("2F"));
-        map_listview.getItems().add(hm.get("Agora"));
+        //hm.put("2F", new Poi("2F", "Edificion del DSIC", 325, 225));
+        //hm.put("Agora", new Poi("Agora", "Agora", 600, 360));
+        //map_listview.getItems().add(hm.get("2F"));
+        //map_listview.getItems().add(hm.get("Agora"));
     }
 
     @Override
