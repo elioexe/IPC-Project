@@ -136,6 +136,7 @@ public class FXMLRegister implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FXMLlogin.fxml"));
             Parent root = loader.load();
             FXMLloginController logincontroller = loader.getController();
+            //TODO : change initdata and add avatar pic than send it to logIn than to menuprincipal
             logincontroller.initData(navegacion,player);
             Stage stage=new Stage();
             stage.setTitle("Log In");

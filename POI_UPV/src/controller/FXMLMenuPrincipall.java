@@ -23,7 +23,10 @@ import model.Navegacion;
 import model.Session;
 import model.User;
 import controller.FXMLloginController;
+import java.io.File;
 import java.io.IOException;
+import javafx.scene.image.Image;
+import javax.imageio.ImageIO;
 
 /**
  * FXML Controller class
@@ -84,6 +87,13 @@ public class FXMLMenuPrincipall implements Initializable {
         setUpUserInformation(player.getNickName(), player.getEmail(),avgG,nbPassed,nbFailed);      
     }
     
+    public void initData2(Navegacion nav, User plyr, File av){
+        initData(nav,plyr);
+        //TODO : find a way to parse file to imageView
+        //avatar = av;
+        //Image image = ImageIO.read(av);
+    }
+    
     public void setUpUserInformation(String username, String email, Double avgGrade, Integer nbPassed,Integer nbFailed  ){
         userName.setText(username);
         userEmail.setText(email);
@@ -96,7 +106,21 @@ public class FXMLMenuPrincipall implements Initializable {
     }
 
     @FXML
-    private void OnClickedEditProfile(ActionEvent event) {
+    private void OnClickedEditProfile(ActionEvent event) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FXMLModifyProfile.fxml"));
+        Parent root = loader.load();
+        FXMLModifyProfile addController = loader.getController();
+        
+        
+        //TODO : freeze Menu screen when editing
+        addController.initData(navegacion,player);
+        Stage stage=new Stage();
+        stage.setTitle("Menu");
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.setResizable(false);
+        stage.setScene(new Scene(root));
+        stage.show();
         
     }
 
