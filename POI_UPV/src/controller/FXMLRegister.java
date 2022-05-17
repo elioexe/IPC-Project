@@ -144,9 +144,7 @@ public class FXMLRegister implements Initializable {
             stage.setScene(new Scene(root));
             stage.show();
             buttonLogIn.getScene().getWindow().hide();
-        }
-        
-        
+        }      
     }
         
 

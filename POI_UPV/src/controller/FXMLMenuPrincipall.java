@@ -9,14 +9,21 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import model.Navegacion;
 import model.Session;
 import model.User;
+import controller.FXMLloginController;
+import java.io.IOException;
 
 /**
  * FXML Controller class
@@ -90,6 +97,7 @@ public class FXMLMenuPrincipall implements Initializable {
 
     @FXML
     private void OnClickedEditProfile(ActionEvent event) {
+        
     }
 
     @FXML
@@ -97,7 +105,19 @@ public class FXMLMenuPrincipall implements Initializable {
     }
 
     @FXML
-    private void OnClickedLogOut(ActionEvent event) {
+    private void OnClickedLogOut(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FXMLlogin.fxml"));
+        Parent root = loader.load();
+        //FXMLloginController addController = loader.getController();
+
+        //addController.initData(navegacion,player);
+        Stage stage=new Stage();
+        stage.setTitle("Log In");
+        //stage.initModality(Modality.WINDOW_MODAL);
+        stage.setResizable(false);
+        stage.setScene(new Scene(root));
+        stage.show();
+        butttonExercice.getScene().getWindow().hide();
     }
 
     @FXML
