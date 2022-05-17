@@ -69,7 +69,11 @@ public class FXMLloginController implements Initializable {
         }
         
        
-    }    
+    }  
+    public void initData(Navegacion nav, User plyr){
+        navegacion = nav;
+        player = plyr;
+    }
     
     private boolean checkValidInf(){
         String user = userName.textProperty().getValueSafe();
@@ -95,21 +99,21 @@ public class FXMLloginController implements Initializable {
         String pswd = passWord.textProperty().getValueSafe();
         User isExist = navegacion.loginUser(user, pswd);
         if(!navegacion.exitsNickName(user)){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("IINFORMATION");
             alert.setHeaderText("Username not existing");
             //alert.setContentText("Has comprado en " );
             ButtonType button1 = new ButtonType("Ok");
             alert.showAndWait();
-            return;
+            //return;
         }else if (isExist == null){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("IINFORMATION");
             alert.setHeaderText("wrong password");
             //alert.setContentText("Has comprado en " );
             ButtonType button1 = new ButtonType("Ok");
             alert.showAndWait();
-            return;
+            //return;
         }else {
             player = isExist;
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/View/FXMLMenuPrincipal.fxml"));

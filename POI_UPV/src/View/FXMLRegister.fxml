@@ -38,7 +38,7 @@
             <TextField fx:id="email" layoutX="149.0" layoutY="139.0" />
             <TextField fx:id="password" layoutX="149.0" layoutY="176.0" />
             <Button layoutX="253.0" layoutY="287.0" mnemonicParsing="false" onAction="#ClickedOnregister" text="Register" />
-            <Button fx:id="downloadAv" layoutX="149.0" layoutY="253.0" mnemonicParsing="false" text="Downlad your file" />
+            <Button layoutX="149.0" layoutY="253.0" mnemonicParsing="false" onAction="#fileChose" text="Downlad your file" />
             <DatePicker fx:id="dateOfBirth" layoutX="149.0" layoutY="213.0" prefHeight="24.0" prefWidth="171.0" />
             <Label layoutX="38.0" layoutY="327.0" text="Already register ?" />
             <Button fx:id="buttonLogIn" layoutX="160.0" layoutY="323.0" mnemonicParsing="false" onAction="#ClickedOnLogIn" text="Log In!" />
