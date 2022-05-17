@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="382.0" prefWidth="600.0" stylesheets="@../Style/CSSLogIN.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FXMLloginController">
+   <children>
+      <AnchorPane prefHeight="402.0" prefWidth="260.0">
+         <children>
+            <ImageView fitHeight="482.0" fitWidth="260.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/sailingLogIn.jpg" />
+               </image>
+            </ImageView>
+            <Text layoutX="88.0" layoutY="198.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pro Sailing" />
+         </children>
+      </AnchorPane>
+      <AnchorPane opacity="0.94" prefHeight="382.0" prefWidth="344.0" styleClass="BackGround">
+         <children>
+            <ImageView fitHeight="118.0" fitWidth="154.0" layoutX="98.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/ancre.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="183.0" text="Username" />
+            <Label layoutX="47.0" layoutY="231.0" text="Password" />
+            <TextField fx:id="userName" layoutX="172.0" layoutY="179.0" prefHeight="24.0" prefWidth="155.0" />
+            <TextField fx:id="passWord" layoutX="172.0" layoutY="227.0" prefHeight="24.0" prefWidth="155.0" />
+            <Button fx:id="buttonLogIn" layoutX="79.0" layoutY="276.0" mnemonicParsing="false" onAction="#OnclickedLogIn" prefHeight="41.0" prefWidth="186.0" text="Log In" />
+            <Label layoutX="80.0" layoutY="335.0" text="Not a user ? " />
+            <Button fx:id="buttonSignUp" layoutX="163.0" layoutY="331.0" mnemonicParsing="false" onAction="#OnclikedSignUp" styleClass="SignupButton" text="Sign up !" textFill="#002bff" underline="true" />
+         </children></AnchorPane>
+   </children>
+</HBox>

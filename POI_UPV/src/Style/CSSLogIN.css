@@ -1,0 +1,22 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : May 17, 2022, 1:39:29 PM
+    Author     : eliotvg
+*/
+
+.BackGround{
+    -fx-background-color: #FAEBD7;
+}
+
+Hbox > text{
+    -fx-font-family:"Arial Rounded MT";
+}
+
+.SignupButton{
+    -fx-background-color: transparent;
+    -fx-cursor:hand;
+    color:green;
+}
